@@ -1,7 +1,6 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import org.jspecify.annotations.NonNull;
 import pages.components.*;
 
 import static com.codeborne.selenide.Condition.*;
@@ -31,7 +30,6 @@ public class RegistrationPage {
     userCurrentAddress = $("#currentAddress"),
 
   btnSubmit = $("#submit");
-  ;
 
   public RegistrationPage openPage() {
     open("/automation-practice-form");
