@@ -33,7 +33,6 @@ public class RegistrationPage {
   btnSubmit = $("#submit");
   ;
 
-
   public RegistrationPage openPage() {
     open("/automation-practice-form");
 

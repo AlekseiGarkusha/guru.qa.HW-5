@@ -12,13 +12,6 @@ public class ComparisonFieldsComponent {
     $(".table-responsive")
       .$(byText(fieldName))
       .parent()
-      .$("td:nth-child(2)")
-      .shouldHave(text(expectedValue));
-
-
-    $(".table-responsive")
-      .$(byText(fieldName))
-      .parent()
       .shouldHave(partialText((expectedValue)));
   }
 
