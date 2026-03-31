@@ -18,16 +18,16 @@ public class ComparisonFieldsComponent {
   public void comparisonFieldsPositiveTest(TestData testData) {
     $(byText("Thanks for submitting the form")).shouldBe(visible.because("❌ Форма с результирующими данными пользователя - не загрузилась"));
 
-      checkField("Student Name", (testData.userFakerFirstName + " " + testData.userFakerLastName));
-      checkField( "Student Email", testData.userFakerEmail);
-      checkField("Gender", (testData.userFakerGender));
-      checkField("Mobile",(testData.userFakerNumber));
-      checkField("Date of Birth",testData.userFakerDay + " " + testData.userFakerMonth + "," + testData.userFakerYear);
-      checkField("Subjects",(testData.userFakerSubject));
-      checkField("Hobbies",(testData.userFakerHobby));
-      checkField("Picture",(testData.userPicture));
-      checkField("Address",(testData.userCurrentAddress));
-      checkField("State and City",(testData.userFakerState + " " + testData.userFakerCity));
+    checkField("Student Name", (testData.userFakerFirstName + " " + testData.userFakerLastName));
+    checkField("Student Email", testData.userFakerEmail);
+    checkField("Gender", (testData.userFakerGender));
+    checkField("Mobile", (testData.userFakerNumber));
+    checkField("Date of Birth", testData.userFakerDay + " " + testData.userFakerMonth + "," + testData.userFakerYear);
+    checkField("Subjects", (testData.userFakerSubject));
+    checkField("Hobbies", (testData.userFakerHobby));
+    checkField("Picture", (testData.userPicture));
+    checkField("Address", (testData.userCurrentAddress));
+    checkField("State and City", (testData.userFakerState + " " + testData.userFakerCity));
   }
 
 }

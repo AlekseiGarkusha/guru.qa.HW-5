@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.PositiveTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-03-11T19:40:10.917Z" hostname="DESKTOP-A8CGM4F" time="28.71">
+<testsuite name="tests.PositiveTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-03-25T19:04:38.862Z" hostname="DESKTOP-A8CGM4F" time="21.37">
   <properties/>
-  <testcase name="practiceFormTest()" classname="tests.PositiveTest" time="28.71"/>
+  <testcase name="practiceFormTest()" classname="tests.PositiveTest" time="21.37"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-мар. 11, 2026 10:40:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 144; Please update to a Selenium version that supports CDP version 145
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.14.0 / Selenium 4.40.0 / chrome 145.0.7632.160 windows
+мар. 25, 2026 10:04:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 146, returning the closest version; found: 144; Please update to a Selenium version that supports CDP version 146
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.14.0 / Selenium 4.40.0 / chrome 146.0.7680.164 windows
 ]]></system-err>
 </testsuite>
