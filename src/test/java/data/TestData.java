@@ -9,6 +9,8 @@ public class TestData {
   public Faker faker = new Faker();
   public Faker fakerRu = new Faker(new Locale("ru"));
 
+  public static final String automationFormUrl = "/automation-practice-form";
+
   public final String
     userFakerFirstName = fakerRu.name().firstName(),
     userFakerLastName = fakerRu.name().lastName(),

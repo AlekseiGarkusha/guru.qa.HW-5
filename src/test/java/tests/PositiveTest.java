@@ -15,16 +15,22 @@
   import pages.components.ComparisonFieldsComponent;
   import setup.TestBase;
 
+  import static com.codeborne.selenide.Selenide.open;
+
   public class PositiveTest extends TestBase {
+    static RegistrationPage registrationPage = new RegistrationPage();
+    TestData testData = new TestData();
+
+    @BeforeAll
+    public static void openPage() {
+      open(TestData.automationFormUrl);
+    }
 
     @Test
     public void practiceFormTest() {
-      RegistrationPage registrationPage = new RegistrationPage();
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
-      TestData testData = new TestData();
 
       registrationPage
-        .openPage()
         .typeUserName(testData.userFakerFirstName,testData.userFakerLastName)
         .typeUserEmail(testData.userFakerEmail)
         .chooseGender(testData.userFakerGender)

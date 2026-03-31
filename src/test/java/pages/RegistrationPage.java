@@ -31,12 +31,6 @@ public class RegistrationPage {
 
   btnSubmit = $("#submit");
 
-  public RegistrationPage openPage() {
-    open("/automation-practice-form");
-
-    return this;
-  }
-
   public RegistrationPage typeUserName(String name, String userLastName) {
     userFirstNameInput.setValue(name);
     userLastNameInput.setValue(userLastName);
