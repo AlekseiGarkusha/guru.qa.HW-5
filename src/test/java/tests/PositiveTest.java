@@ -10,6 +10,7 @@
   package tests;
 
   import data.TestData;
+  import io.qameta.allure.*;
   import org.junit.jupiter.api.*;
   import pages.RegistrationPage;
   import pages.components.ComparisonFieldsComponent;
@@ -27,6 +28,12 @@
     }
 
     @Test
+    @Feature("Форма студента")
+    @Story("Заполнение всех полей")
+    @Owner("AlexeyGarkusha")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(value = "Practice-form", url = "/automation-practice-form")
+    @DisplayName("Заполнение всех полей формы студента, и проверка на соответствие")
     public void practiceFormTest() {
       ComparisonFieldsComponent comparisonFields = new ComparisonFieldsComponent();
 
