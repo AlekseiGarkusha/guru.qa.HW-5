@@ -44,5 +44,8 @@ jobs:
         if: always()
         with:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/reports/tests
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+
+          with:
