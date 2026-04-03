@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import pages.components.*;
 
 import static com.codeborne.selenide.Condition.*;
@@ -31,6 +32,7 @@ public class RegistrationPage {
 
   btnSubmit = $("#submit");
 
+  @Step("Заполнение полей: имя и фамилии")
   public RegistrationPage typeUserName(String name, String userLastName) {
     userFirstNameInput.setValue(name);
     userLastNameInput.setValue(userLastName);
@@ -38,36 +40,40 @@ public class RegistrationPage {
     return this;
   }
 
+  @Step("Заполнение поля Email")
   public RegistrationPage typeUserEmail(String value) {
     userEmailInput.setValue(value);
 
     return this;
   }
-
+  @Step("Заполнение поля выбора гендера")
   public RegistrationPage chooseGender(String value) {
     userGender.$(byText(value)).click();
 
     return this;
   }
-
+  @Step("Заполнение поля телефон")
   public RegistrationPage typeUserNumber(String value) {
     userNumberInput.setValue(value);
 
     return this;
   }
 
+  @Step("Заполнение поля Дата рождения")
   public RegistrationPage setDateOfBirth(int day, String month, int year) {
     calendar.setDate(day, month, year);
 
     return this;
   }
 
+  @Step("Заполнение поля выбор предметов")
   public RegistrationPage setUserSubjets(String value) {
     userSubjects.setValue(value).pressEnter();
 
     return this;
   }
 
+  @Step("Заполнение поля выбор хобби")
   public RegistrationPage setUserHobbies(String value) {
     switch (value) {
       case "Sports" -> $(hobbySports).click();
@@ -78,18 +84,21 @@ public class RegistrationPage {
     return this;
   }
 
+  @Step("Загрузка картинки")
   public RegistrationPage uploadPicture(String value) {
     userUploadPicture.uploadFromClasspath(value);
 
     return this;
   }
 
+  @Step("Заполнение адреса")
   public RegistrationPage typeUserCurrentAddress(String value) {
     userCurrentAddress.sendKeys(value);
 
     return this;
   }
 
+  @Step("Выбор Штата и Города")
   public RegistrationPage setStateAndCity(String state, String city) {
     userState.setValue(state).pressEnter();
     userCity.setValue(city).pressEnter();
@@ -97,6 +106,7 @@ public class RegistrationPage {
     return this;
   }
 
+  @Step("Подтвержение формы")
   public RegistrationPage clickBtnSubmit() {
     btnSubmit.scrollTo().click();
     $(".modal-content").shouldBe(visible);

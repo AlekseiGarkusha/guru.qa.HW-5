@@ -1,6 +1,7 @@
 package pages.components;
 
 import data.TestData;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
@@ -15,6 +16,7 @@ import static com.codeborne.selenide.Selenide.$;
         .shouldHave(partialText((expectedValue)));
     }
 
+    @Step("Проверка полей на соответствие")
     public void comparisonFieldsPositiveTest(TestData testData) {
       checkField("Student Name", (testData.userFakerFirstName + " " + testData.userFakerLastName));
       checkField("Student Email", testData.userFakerEmail);
